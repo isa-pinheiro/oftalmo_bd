@@ -21,20 +21,20 @@ public class EspecialidadeMedicaTeste {
 
         //salvar
         System.out.println("Salvar");
-        EspecialidadeMedica especialidademedica = new EspecialidadeMedica("observacao", Date.valueOf("2000-01-01"), 2, 2);
+        EspecialidadeMedica especialidademedica = new EspecialidadeMedica("observacao", Date.valueOf("1000-01-01"), 1, 1);
         especialidademedicadao.insertEspecialidadeMedica(especialidademedica);
 
         //buscar por ID
         System.out.println("Busca id");
-        especialidademedica = especialidademedicadao.selectEspecialidadeMedica(2);
-        System.out.println(especialidademedicadao.selectEspecialidadeMedica(2));
+        especialidademedica = especialidademedicadao.selectEspecialidadeMedica(1);
+        System.out.println(especialidademedicadao.selectEspecialidadeMedica(1));
 
         //update
         System.out.println("update");
         especialidademedica.setObservacao("observacao1");
         especialidademedica.setDtConclusao(Date.valueOf("2001-01-01"));
-        especialidademedica.setIdEspecialidade(2);
-        especialidademedica.setIdMedico(2);
+        especialidademedica.setIdEspecialidade(1);
+        especialidademedica.setIdMedico(1);
         especialidademedicadao.updateEspecialidadeMedica(especialidademedica);
         especialidademedica = especialidademedicadao.selectEspecialidadeMedica(1);
         System.out.println(especialidademedica);
@@ -45,8 +45,8 @@ public class EspecialidadeMedicaTeste {
         especialidademedicas.forEach(System.out::println);
 
         //delete
-        System.out.println("delete");
-        especialidademedicadao.deleteEspecialidadeMedica(1);
-        especialidademedicadao.selectAllEspecialidadeMedicas().forEach(System.out::println);
+        // System.out.println("delete");
+        // especialidademedicadao.deleteEspecialidadeMedica(1);
+        // especialidademedicadao.selectAllEspecialidadeMedicas().forEach(System.out::println);
     }
 }

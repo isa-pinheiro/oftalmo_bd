@@ -10,11 +10,11 @@ import java.util.List;
 
 public class MedicoDAO extends ConexaoDB {
 
-    private static final String INSERT_ESPECIALIDADE_SQL = "INSERT INTO medicos (nome, crm) VALUES (?, ?);";
-    private static final String SELECT_ESPECIALIDADE_BY_ID = "SELECT id, nome, crm FROM medicos WHERE id = ?";
-    private static final String SELECT_ALL_ESPECIALIDADE = "SELECT * FROM medicos;";
-    private static final String DELETE_ESPECIALIDADE_SQL = "DELETE FROM medicos WHERE id = ?;";
-    private static final String UPDATE_ESPECIALIDADE_SQL = "UPDATE medicos SET nome = ?, crm = ? WHERE id = ?;";
+    private static final String INSERT_MEDICO_SQL = "INSERT INTO medicos (nome, crm) VALUES (?, ?);";
+    private static final String SELECT_MEDICO_BY_ID = "SELECT id, nome, crm FROM medicos WHERE id = ?";
+    private static final String SELECT_ALL_MEDICO = "SELECT * FROM medicos;";
+    private static final String DELETE_MEDICO_SQL = "DELETE FROM medicos WHERE id = ?;";
+    private static final String UPDATE_MEDICO_SQL = "UPDATE medicos SET nome = ?, crm = ? WHERE id = ?;";
     private static final String TOTAL = "SELECT count(1) FROM medicos;";
 
     public Integer count() {
@@ -33,7 +33,7 @@ public class MedicoDAO extends ConexaoDB {
     }
 
     public void insertMedico(Medico entidade) {
-        try (PreparedStatement preparedStatement = prepararSQL(INSERT_ESPECIALIDADE_SQL)) {
+        try (PreparedStatement preparedStatement = prepararSQL(INSERT_MEDICO_SQL)) {
             preparedStatement.setString(1, entidade.getNome());
             preparedStatement.setString(2, entidade.getCrm());
             preparedStatement.executeUpdate();
@@ -46,7 +46,7 @@ public class MedicoDAO extends ConexaoDB {
 
     public Medico selectMedico(int id) {
         Medico entidade = null;
-        try (PreparedStatement preparedStatement = prepararSQL(SELECT_ESPECIALIDADE_BY_ID)) {
+        try (PreparedStatement preparedStatement = prepararSQL(SELECT_MEDICO_BY_ID)) {
             preparedStatement.setInt(1, id);
             ResultSet rs = preparedStatement.executeQuery();
 
@@ -65,7 +65,7 @@ public class MedicoDAO extends ConexaoDB {
 
     public List<Medico> selectAllMedicos() {
         List<Medico> entidades = new ArrayList<>();
-        try (PreparedStatement preparedStatement = prepararSQL(SELECT_ALL_ESPECIALIDADE)) {
+        try (PreparedStatement preparedStatement = prepararSQL(SELECT_ALL_MEDICO)) {
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
@@ -83,7 +83,7 @@ public class MedicoDAO extends ConexaoDB {
     }
 
     public boolean deleteMedico(int id) throws SQLException {
-        try (PreparedStatement statement = prepararSQL(DELETE_ESPECIALIDADE_SQL)) {
+        try (PreparedStatement statement = prepararSQL(DELETE_MEDICO_SQL)) {
             statement.setInt(1, id);
             return statement.executeUpdate() > 0;
         } catch (ClassNotFoundException e) {
@@ -92,7 +92,7 @@ public class MedicoDAO extends ConexaoDB {
     }
 
     public boolean updateMedico(Medico entidade) throws SQLException {
-        try (PreparedStatement statement = prepararSQL(UPDATE_ESPECIALIDADE_SQL)) {
+        try (PreparedStatement statement = prepararSQL(UPDATE_MEDICO_SQL)) {
             statement.setString(1, entidade.getNome());
             statement.setString(2, entidade.getCrm());
             statement.setInt(3, entidade.getId());

@@ -42,8 +42,8 @@ public class EspecialidadeTeste {
         especialidades.forEach(System.out::println);
 
         //delete
-        System.out.println("delete");
-        especialidadedao.deleteEspecialidade(1);
-        especialidadedao.selectAllEspecialidades().forEach(System.out::println);
+        // System.out.println("delete");
+        // especialidadedao.deleteEspecialidade(1);
+        // especialidadedao.selectAllEspecialidades().forEach(System.out::println);
     }
 }

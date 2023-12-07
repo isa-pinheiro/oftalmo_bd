@@ -21,7 +21,7 @@ public class ConsultaMedicaTeste {
 
         //salvar
         System.out.println("Salvar");
-        ConsultaMedica consultamedica = new ConsultaMedica("assinatura", Date.valueOf("2000-01-01"), 1, 2);
+        ConsultaMedica consultamedica = new ConsultaMedica("assinatura", Date.valueOf("2000-01-01"), 1, 1);
         consultamedicadao.insertConsultaMedica(consultamedica);
 
         //buscar por ID
@@ -45,8 +45,8 @@ public class ConsultaMedicaTeste {
         consultamedicas.forEach(System.out::println);
 
         //delete
-        System.out.println("delete");
-        consultamedicadao.deleteConsultaMedica(1);
-        consultamedicadao.selectAllConsultaMedicas().forEach(System.out::println);
+        // System.out.println("delete");
+        // consultamedicadao.deleteConsultaMedica(1);
+        // consultamedicadao.selectAllConsultaMedicas().forEach(System.out::println);
     }
 }

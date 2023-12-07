@@ -42,8 +42,8 @@ public class MedicoTeste {
         medicos.forEach(System.out::println);
 
         //delete
-        System.out.println("delete");
-        medicodao.deleteMedico(1);
-        medicodao.selectAllMedicos().forEach(System.out::println);
+        // System.out.println("delete");
+        // medicodao.deleteMedico(1);
+        // medicodao.selectAllMedicos().forEach(System.out::println);
     }
 }

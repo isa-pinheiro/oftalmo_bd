@@ -44,8 +44,8 @@ public class PacienteTeste {
         pacientes.forEach(System.out::println);
 
         //delete
-        System.out.println("delete");
-        pacientedao.deletePaciente(10);
-        pacientedao.selectAllPacientes().forEach(System.out::println);
+        // System.out.println("delete");
+        // pacientedao.deletePaciente(10);
+        // pacientedao.selectAllPacientes().forEach(System.out::println);
     }
 }

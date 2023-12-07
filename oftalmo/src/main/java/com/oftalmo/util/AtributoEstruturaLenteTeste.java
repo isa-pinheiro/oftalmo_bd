@@ -42,8 +42,8 @@ public class AtributoEstruturaLenteTeste {
         especialidades.forEach(System.out::println);
 
         //delete
-        System.out.println("delete");
-        especialidadedao.deleteAtributoEstruturaLente(1);
-        especialidadedao.selectAllAtributoEstruturaLentes().forEach(System.out::println);
+        // System.out.println("delete");
+        // especialidadedao.deleteAtributoEstruturaLente(1);
+        // especialidadedao.selectAllAtributoEstruturaLentes().forEach(System.out::println);
     }
 }
