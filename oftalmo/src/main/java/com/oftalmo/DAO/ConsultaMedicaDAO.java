@@ -11,12 +11,12 @@ import java.util.List;
 
 public class ConsultaMedicaDAO extends ConexaoDB {
 
-    private static final String INSERT_CONSULTAMEDICA_SQL = "INSERT INTO consultas_medicas (assinatura, dt_consulta, id_paciente, id_medico) VALUES (?, ?, ?, ?);";
-    private static final String SELECT_CONSULTAMEDICA_BY_ID = "SELECT id, assinatura, dt_consulta, id_paciente, id_medico FROM consultas_medicas WHERE id = ?";
-    private static final String SELECT_ALL_CONSULTAMEDICA = "SELECT * FROM consultas_medicas;";
-    private static final String DELETE_CONSULTAMEDICA_SQL = "DELETE FROM consultas_medicas WHERE id = ?;";
-    private static final String UPDATE_CONSULTAMEDICA_SQL = "UPDATE consultas_medicas SET assinatura = ?, dt_consulta = ?, id_paciente = ?, id_medico = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM consultas_medicas;";
+    private static final String INSERT_CONSULTAMEDICA_SQL = "INSERT INTO consulta_medica (assinatura, dt_consulta, id_paciente, id_medico) VALUES (?, ?, ?, ?);";
+    private static final String SELECT_CONSULTAMEDICA_BY_ID = "SELECT id, assinatura, dt_consulta, id_paciente, id_medico FROM consulta_medica WHERE id = ?";
+    private static final String SELECT_ALL_CONSULTAMEDICA = "SELECT * FROM consulta_medica;";
+    private static final String DELETE_CONSULTAMEDICA_SQL = "DELETE FROM consulta_medica WHERE id = ?;";
+    private static final String UPDATE_CONSULTAMEDICA_SQL = "UPDATE consulta_medica SET assinatura = ?, dt_consulta = ?, id_paciente = ?, id_medico = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM consulta_medica;";
 
     public Integer count() {
         Integer count = 0;

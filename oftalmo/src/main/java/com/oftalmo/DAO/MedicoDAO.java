@@ -10,12 +10,12 @@ import java.util.List;
 
 public class MedicoDAO extends ConexaoDB {
 
-    private static final String INSERT_MEDICO_SQL = "INSERT INTO medicos (nome, crm) VALUES (?, ?);";
-    private static final String SELECT_MEDICO_BY_ID = "SELECT id, nome, crm FROM medicos WHERE id = ?";
-    private static final String SELECT_ALL_MEDICO = "SELECT * FROM medicos;";
-    private static final String DELETE_MEDICO_SQL = "DELETE FROM medicos WHERE id = ?;";
-    private static final String UPDATE_MEDICO_SQL = "UPDATE medicos SET nome = ?, crm = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM medicos;";
+    private static final String INSERT_MEDICO_SQL = "INSERT INTO medico (nome, crm) VALUES (?, ?);";
+    private static final String SELECT_MEDICO_BY_ID = "SELECT id, nome, crm FROM medico WHERE id = ?";
+    private static final String SELECT_ALL_MEDICO = "SELECT * FROM medico;";
+    private static final String DELETE_MEDICO_SQL = "DELETE FROM medico WHERE id = ?;";
+    private static final String UPDATE_MEDICO_SQL = "UPDATE medico SET nome = ?, crm = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM medico;";
 
     public Integer count() {
         Integer count = 0;

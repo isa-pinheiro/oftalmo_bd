@@ -10,12 +10,12 @@ import java.util.List;
 
 public class AtributoEstruturaLenteDAO extends ConexaoDB {
 
-    private static final String INSERT_ATRIBUTOESTRUTURALENTE_SQL = "INSERT INTO atributos_estrutura_lente (descricao, lado_olho) VALUES (?, ?);";
-    private static final String SELECT_ATRIBUTOESTRUTURALENTE_BY_ID = "SELECT id, descricao, lado_olho FROM atributos_estrutura_lente WHERE id = ?";
-    private static final String SELECT_ALL_ATRIBUTOESTRUTURALENTE = "SELECT * FROM atributos_estrutura_lente;";
-    private static final String DELETE_ATRIBUTOESTRUTURALENTE_SQL = "DELETE FROM atributos_estrutura_lente WHERE id = ?;";
-    private static final String UPDATE_ATRIBUTOESTRUTURALENTE_SQL = "UPDATE atributos_estrutura_lente SET descricao = ?, lado_olho = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM atributos_estrutura_lente;";
+    private static final String INSERT_ATRIBUTOESTRUTURALENTE_SQL = "INSERT INTO atributo_estrutura_lente (descricao, lado_olho) VALUES (?, ?);";
+    private static final String SELECT_ATRIBUTOESTRUTURALENTE_BY_ID = "SELECT id, descricao, lado_olho FROM atributo_estrutura_lente WHERE id = ?";
+    private static final String SELECT_ALL_ATRIBUTOESTRUTURALENTE = "SELECT * FROM atributo_estrutura_lente;";
+    private static final String DELETE_ATRIBUTOESTRUTURALENTE_SQL = "DELETE FROM atributo_estrutura_lente WHERE id = ?;";
+    private static final String UPDATE_ATRIBUTOESTRUTURALENTE_SQL = "UPDATE atributo_estrutura_lente SET descricao = ?, lado_olho = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM atributo_estrutura_lente;";
 
     public Integer count() {
         Integer count = 0;

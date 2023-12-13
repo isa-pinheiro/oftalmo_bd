@@ -10,12 +10,12 @@ import java.util.List;
 
 public class EspecialidadeDAO extends ConexaoDB {
 
-    private static final String INSERT_ESPECIALIDADE_SQL = "INSERT INTO especialidades (descricao, conselho) VALUES (?, ?);";
-    private static final String SELECT_ESPECIALIDADE_BY_ID = "SELECT id, descricao, conselho FROM especialidades WHERE id = ?";
-    private static final String SELECT_ALL_ESPECIALIDADE = "SELECT * FROM especialidades;";
-    private static final String DELETE_ESPECIALIDADE_SQL = "DELETE FROM especialidades WHERE id = ?;";
-    private static final String UPDATE_ESPECIALIDADE_SQL = "UPDATE especialidades SET descricao = ?, conselho = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM especialidades;";
+    private static final String INSERT_ESPECIALIDADE_SQL = "INSERT INTO especialidade (descricao, conselho) VALUES (?, ?);";
+    private static final String SELECT_ESPECIALIDADE_BY_ID = "SELECT id, descricao, conselho FROM especialidade WHERE id = ?";
+    private static final String SELECT_ALL_ESPECIALIDADE = "SELECT * FROM especialidade;";
+    private static final String DELETE_ESPECIALIDADE_SQL = "DELETE FROM especialidade WHERE id = ?;";
+    private static final String UPDATE_ESPECIALIDADE_SQL = "UPDATE especialidade SET descricao = ?, conselho = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM especialidade;";
 
     public Integer count() {
         Integer count = 0;

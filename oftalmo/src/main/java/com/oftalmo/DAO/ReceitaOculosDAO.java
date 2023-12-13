@@ -11,12 +11,12 @@ import java.util.List;
 
 public class ReceitaOculosDAO extends ConexaoDB {
 
-    private static final String INSERT_RECEITAOCULOS_SQL = "INSERT INTO receitas_oculos (detalhamento, dt_consulta, id_consulta_medica) VALUES (?, ?, ?);";
-    private static final String SELECT_RECEITAOCULOS_BY_ID = "SELECT id, detalhamento, dt_consulta, id_consulta_medica FROM receitas_oculos WHERE id = ?";
-    private static final String SELECT_ALL_RECEITAOCULOS = "SELECT * FROM receitas_oculos;";
-    private static final String DELETE_RECEITAOCULOS_SQL = "DELETE FROM receitas_oculos WHERE id = ?;";
-    private static final String UPDATE_RECEITAOCULOS_SQL = "UPDATE receitas_oculos SET detalhamento = ?, dt_consulta = ?, id_consulta_medica = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM receitas_oculos;";
+    private static final String INSERT_RECEITAOCULOS_SQL = "INSERT INTO receita_oculos (detalhamento, dt_consulta, id_consulta_medica) VALUES (?, ?, ?);";
+    private static final String SELECT_RECEITAOCULOS_BY_ID = "SELECT id, detalhamento, dt_consulta, id_consulta_medica FROM receita_oculos WHERE id = ?";
+    private static final String SELECT_ALL_RECEITAOCULOS = "SELECT * FROM receita_oculos;";
+    private static final String DELETE_RECEITAOCULOS_SQL = "DELETE FROM receita_oculos WHERE id = ?;";
+    private static final String UPDATE_RECEITAOCULOS_SQL = "UPDATE receita_oculos SET detalhamento = ?, dt_consulta = ?, id_consulta_medica = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM receita_oculos;";
 
     public Integer count() {
         Integer count = 0;

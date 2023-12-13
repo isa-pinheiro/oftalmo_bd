@@ -11,12 +11,12 @@ import java.util.List;
 
 public class EspecialidadeMedicaDAO extends ConexaoDB {
 
-    private static final String INSERT_ESPECIALIDADEMEDICA_SQL = "INSERT INTO especialidades_medicas (observacao, dt_conclusao, id_especialidade, id_medico) VALUES (?, ?, ?, ?);";
-    private static final String SELECT_ESPECIALIDADEMEDICA_BY_ID = "SELECT id, observacao, dt_conclusao, id_especialidade, id_medico FROM especialidades_medicas WHERE id = ?";
-    private static final String SELECT_ALL_ESPECIALIDADEMEDICA = "SELECT * FROM especialidades_medicas;";
-    private static final String DELETE_ESPECIALIDADEMEDICA_SQL = "DELETE FROM especialidades_medicas WHERE id = ?;";
-    private static final String UPDATE_ESPECIALIDADEMEDICA_SQL = "UPDATE especialidades_medicas SET observacao = ?, dt_conclusao = ?, id_especialidade = ?, id_medico = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM especialidades_medicas;";
+    private static final String INSERT_ESPECIALIDADEMEDICA_SQL = "INSERT INTO especialidade_medica (observacao, dt_conclusao, id_especialidade, id_medico) VALUES (?, ?, ?, ?);";
+    private static final String SELECT_ESPECIALIDADEMEDICA_BY_ID = "SELECT id, observacao, dt_conclusao, id_especialidade, id_medico FROM especialidade_medica WHERE id = ?";
+    private static final String SELECT_ALL_ESPECIALIDADEMEDICA = "SELECT * FROM especialidade_medica;";
+    private static final String DELETE_ESPECIALIDADEMEDICA_SQL = "DELETE FROM especialidade_medica WHERE id = ?;";
+    private static final String UPDATE_ESPECIALIDADEMEDICA_SQL = "UPDATE especialidade_medica SET observacao = ?, dt_conclusao = ?, id_especialidade = ?, id_medico = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM especialidade_medica;";
 
     public Integer count() {
         Integer count = 0;

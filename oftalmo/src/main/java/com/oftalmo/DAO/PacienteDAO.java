@@ -11,12 +11,12 @@ import java.util.List;
 
 public class PacienteDAO extends ConexaoDB {
 
-    private static final String INSERT_PACIENTE_SQL = "INSERT INTO pacientes (nome, cpf, dt_nascimento) VALUES (?, ?, ?);";
-    private static final String SELECT_PACIENTE_BY_ID = "SELECT id, nome, cpf, dt_nascimento FROM pacientes WHERE id = ?";
-    private static final String SELECT_ALL_PACIENTE = "SELECT * FROM pacientes;";
-    private static final String DELETE_PACIENTE_SQL = "DELETE FROM pacientes WHERE id = ?;";
-    private static final String UPDATE_PACIENTE_SQL = "UPDATE pacientes SET nome = ?, cpf = ?, dt_nascimento = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM pacientes;";
+    private static final String INSERT_PACIENTE_SQL = "INSERT INTO paciente (nome, cpf, dt_nascimento) VALUES (?, ?, ?);";
+    private static final String SELECT_PACIENTE_BY_ID = "SELECT id, nome, cpf, dt_nascimento FROM paciente WHERE id = ?";
+    private static final String SELECT_ALL_PACIENTE = "SELECT * FROM paciente;";
+    private static final String DELETE_PACIENTE_SQL = "DELETE FROM paciente WHERE id = ?;";
+    private static final String UPDATE_PACIENTE_SQL = "UPDATE paciente SET nome = ?, cpf = ?, dt_nascimento = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM paciente;";
 
     public Integer count() {
         Integer count = 0;

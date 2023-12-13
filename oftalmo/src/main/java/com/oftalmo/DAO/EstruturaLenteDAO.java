@@ -10,12 +10,12 @@ import java.util.List;
 
 public class EstruturaLenteDAO extends ConexaoDB {
 
-    private static final String INSERT_ESTRUTURALENTE_SQL = "INSERT INTO estruturas_lentes (tipo_correcao, distancia_pupilar, id_receita_oculos) VALUES (?, ?, ?);";
-    private static final String SELECT_ESTRUTURALENTE_BY_ID = "SELECT id, tipo_correcao, distancia_pupilar, id_receita_oculos FROM estruturas_lentes WHERE id = ?";
-    private static final String SELECT_ALL_ESTRUTURALENTE = "SELECT * FROM estruturas_lentes;";
-    private static final String DELETE_ESTRUTURALENTE_SQL = "DELETE FROM estruturas_lentes WHERE id = ?;";
-    private static final String UPDATE_ESTRUTURALENTE_SQL = "UPDATE estruturas_lentes SET tipo_correcao = ?, distancia_pupilar = ?, id_receita_oculos = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM estruturas_lentes;";
+    private static final String INSERT_ESTRUTURALENTE_SQL = "INSERT INTO estrutura_lente (tipo_correcao, distancia_pupilar, id_receita_oculos) VALUES (?, ?, ?);";
+    private static final String SELECT_ESTRUTURALENTE_BY_ID = "SELECT id, tipo_correcao, distancia_pupilar, id_receita_oculos FROM estrutura_lente WHERE id = ?";
+    private static final String SELECT_ALL_ESTRUTURALENTE = "SELECT * FROM estrutura_lente;";
+    private static final String DELETE_ESTRUTURALENTE_SQL = "DELETE FROM estrutura_lente WHERE id = ?;";
+    private static final String UPDATE_ESTRUTURALENTE_SQL = "UPDATE estrutura_lente SET tipo_correcao = ?, distancia_pupilar = ?, id_receita_oculos = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM estrutura_lente;";
 
     public Integer count() {
         Integer count = 0;

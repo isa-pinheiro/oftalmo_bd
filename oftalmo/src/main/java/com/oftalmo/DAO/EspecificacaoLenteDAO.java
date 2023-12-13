@@ -10,12 +10,12 @@ import java.util.List;
 
 public class EspecificacaoLenteDAO extends ConexaoDB {
 
-    private static final String INSERT_ESPECIFICACAOLENTE_SQL = "INSERT INTO especificacoes_lente (valor, id_estrutura_lente, id_atributo_estrutura_lente) VALUES (?, ?, ?);";
-    private static final String SELECT_ESPECIFICACAOLENTE_BY_ID = "SELECT id, valor, id_estrutura_lente, id_atributo_estrutura_lente FROM especificacoes_lente WHERE id = ?";
-    private static final String SELECT_ALL_ESPECIFICACAOLENTE = "SELECT * FROM especificacoes_lente;";
-    private static final String DELETE_ESPECIFICACAOLENTE_SQL = "DELETE FROM especificacoes_lente WHERE id = ?;";
-    private static final String UPDATE_ESPECIFICACAOLENTE_SQL = "UPDATE especificacoes_lente SET valor = ?, id_estrutura_lente = ?, id_atributo_estrutura_lente = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM especificacoes_lente;";
+    private static final String INSERT_ESPECIFICACAOLENTE_SQL = "INSERT INTO especificacao_lente (valor, id_estrutura_lente, id_atributo_estrutura_lente) VALUES (?, ?, ?);";
+    private static final String SELECT_ESPECIFICACAOLENTE_BY_ID = "SELECT id, valor, id_estrutura_lente, id_atributo_estrutura_lente FROM especificacao_lente WHERE id = ?";
+    private static final String SELECT_ALL_ESPECIFICACAOLENTE = "SELECT * FROM especificacao_lente;";
+    private static final String DELETE_ESPECIFICACAOLENTE_SQL = "DELETE FROM especificacao_lente WHERE id = ?;";
+    private static final String UPDATE_ESPECIFICACAOLENTE_SQL = "UPDATE especificacao_lente SET valor = ?, id_estrutura_lente = ?, id_atributo_estrutura_lente = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM especificacao_lente;";
 
     public Integer count() {
         Integer count = 0;

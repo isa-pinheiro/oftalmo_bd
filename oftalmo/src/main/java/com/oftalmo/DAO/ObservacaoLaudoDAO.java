@@ -10,12 +10,12 @@ import java.util.List;
 
 public class ObservacaoLaudoDAO extends ConexaoDB {
 
-    private static final String INSERT_OBSERVACAOLAUDO_SQL = "INSERT INTO observacoes_laudos (descricao, id_receita_oculos) VALUES (?, ?);";
-    private static final String SELECT_OBSERVACAOLAUDO_BY_ID = "SELECT id, descricao, id_receita_oculos FROM observacoes_laudos WHERE id = ?";
-    private static final String SELECT_ALL_OBSERVACAOLAUDO = "SELECT * FROM observacoes_laudos;";
-    private static final String DELETE_OBSERVACAOLAUDO_SQL = "DELETE FROM observacoes_laudos WHERE id = ?;";
-    private static final String UPDATE_OBSERVACAOLAUDO_SQL = "UPDATE observacoes_laudos SET descricao = ?, id_receita_oculos = ? WHERE id = ?;";
-    private static final String TOTAL = "SELECT count(1) FROM observacoes_laudos;";
+    private static final String INSERT_OBSERVACAOLAUDO_SQL = "INSERT INTO observacao_laudo (descricao, id_receita_oculos) VALUES (?, ?);";
+    private static final String SELECT_OBSERVACAOLAUDO_BY_ID = "SELECT id, descricao, id_receita_oculos FROM observacao_laudo WHERE id = ?";
+    private static final String SELECT_ALL_OBSERVACAOLAUDO = "SELECT * FROM observacao_laudo;";
+    private static final String DELETE_OBSERVACAOLAUDO_SQL = "DELETE FROM observacao_laudo WHERE id = ?;";
+    private static final String UPDATE_OBSERVACAOLAUDO_SQL = "UPDATE observacao_laudo SET descricao = ?, id_receita_oculos = ? WHERE id = ?;";
+    private static final String TOTAL = "SELECT count(1) FROM observacao_laudo;";
 
     public Integer count() {
         Integer count = 0;
