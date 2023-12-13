@@ -21,7 +21,7 @@ public class ReceitaOculosTeste {
 
         //salvar
         System.out.println("Salvar");
-        ReceitaOculos receitaoculos = new ReceitaOculos("detalhamento", Date.valueOf("2000-01-01"), 2);
+        ReceitaOculos receitaoculos = new ReceitaOculos("detalhamento", Date.valueOf("2050-01-01"), 1);
         receitaoculosdao.insertReceitaOculos(receitaoculos);
 
         //buscar por ID
@@ -33,7 +33,7 @@ public class ReceitaOculosTeste {
         System.out.println("update");
         receitaoculos.setDetalhamento("detalhamento1");
         receitaoculos.setDtConsulta(Date.valueOf("2001-01-11"));
-        receitaoculos.setIdConsultaMedica(2);
+        receitaoculos.setIdConsultaMedica(1);
         receitaoculosdao.updateReceitaOculos(receitaoculos);
         receitaoculos = receitaoculosdao.selectReceitaOculos(1);
         System.out.println(receitaoculos);
@@ -45,7 +45,7 @@ public class ReceitaOculosTeste {
 
         //delete
         // System.out.println("delete");
-        // receitaoculosdao.deleteReceitaOculos(1);
+        // receitaoculosdao.deleteReceitaOculos(10);
         // receitaoculosdao.selectAllReceitaOculoss().forEach(System.out::println);
     }
 }

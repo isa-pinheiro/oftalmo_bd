@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ConexaoDB {
-    private static final String dbName = "isa_oftalmo_bd";
+    private static final String dbName = "isa_oftalmo_db";
     private static final String dbURL = "jdbc:postgresql://200.17.32.221:5432/";
     private static final String username = "postgres";
     private static final String password = "postgres";

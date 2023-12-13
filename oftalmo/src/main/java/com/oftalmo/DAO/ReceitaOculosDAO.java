@@ -2,11 +2,11 @@ package com.oftalmo.DAO;
 
 import com.oftalmo.model.ReceitaOculos;
 
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.sql.Date;
 import java.util.List;
 
 public class ReceitaOculosDAO extends ConexaoDB {
@@ -38,6 +38,7 @@ public class ReceitaOculosDAO extends ConexaoDB {
             preparedStatement.setString(1, entidade.getDetalhamento());
             preparedStatement.setDate(2, entidade.getDtConsulta());
             preparedStatement.setInt(3, entidade.getIdConsultaMedica());
+
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             printSQLException(e);
